@@ -39,6 +39,7 @@ const services = [
 const imageMap: Record<number, number> = {
   7: 10, // 7th service uses 10.jpg
   8: 11, // 8th service uses 11.jpg
+  2: 21, // 2nd service uses 21.jpg
 }
 
 export function ServicesSection() {
