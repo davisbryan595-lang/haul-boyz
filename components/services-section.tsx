@@ -35,6 +35,12 @@ const services = [
   },
 ]
 
+// map specific services to different image numbers
+const imageMap: Record<number, number> = {
+  7: 10, // 7th service uses 10.jpg
+  8: 11, // 8th service uses 11.jpg
+}
+
 export function ServicesSection() {
   return (
     <section id="services" className="py-20 bg-muted/30">
@@ -49,26 +55,29 @@ export function ServicesSection() {
 
         {/* Service Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <Card
-              key={index}
-              className="relative group overflow-hidden rounded-2xl shadow-lg h-[280px] cursor-pointer"
-              style={{
-                backgroundImage: `url(/servicespics/${index + 1}.jpg)`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/50 group-hover:bg-black/70 transition-all duration-300"></div>
+          {services.map((service, index) => {
+            const imageNumber = imageMap[index + 1] || index + 1
+            return (
+              <Card
+                key={index}
+                className="relative group overflow-hidden rounded-2xl shadow-lg h-[280px] cursor-pointer"
+                style={{
+                  backgroundImage: `url(/servicespics/${imageNumber}.jpg)`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/50 group-hover:bg-black/70 transition-all duration-300"></div>
 
-              {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 transition-transform duration-300 group-hover:scale-105">
-                <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
-                <p className="text-sm md:text-base text-gray-200">{service.description}</p>
-              </div>
-            </Card>
-          ))}
+                {/* Content */}
+                <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 transition-transform duration-300 group-hover:scale-105">
+                  <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
+                  <p className="text-sm md:text-base text-gray-200">{service.description}</p>
+                </div>
+              </Card>
+            )
+          })}
         </div>
 
         {/* Why Choose Us */}
