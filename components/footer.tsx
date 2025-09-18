@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Phone, Mail, MapPin } from "lucide-react"
+import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from "lucide-react"
 
 export function Footer() {
   return (
@@ -60,8 +60,27 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-secondary-foreground/20 mt-8 pt-8 text-center">
-          <p className="text-sm opacity-90">© 2024 Haul Boyz Junk Removal. All rights reserved. | We Clear It All!</p>
+        {/* Divider */}
+        <div className="border-t border-secondary-foreground/20 mt-8 pt-8 text-center space-y-6">
+          <p className="text-sm opacity-90">
+            © 2024 Haul Boyz Junk Removal. All rights reserved. | We Clear It All!
+          </p>
+
+          {/* Social Media Icons */}
+          <div className="flex justify-center space-x-6">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+              <Facebook className="w-5 h-5" />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+              <Instagram className="w-5 h-5" />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+              <Twitter className="w-5 h-5" />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+              <Linkedin className="w-5 h-5" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
