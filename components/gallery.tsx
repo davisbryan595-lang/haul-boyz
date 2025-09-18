@@ -36,13 +36,13 @@ export function GallerySection() {
           {images.map((src, index) => (
             <div
               key={index}
-              className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer transition-transform duration-300 hover:scale-105 min-h-[300px]"
+              className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer transition-transform duration-300 hover:scale-105 h-72"
               onClick={() => setCurrentIndex(index)}
             >
               <img
                 src={src}
                 alt={`Gallery image ${index + 1}`}
-                className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
             </div>
           ))}
