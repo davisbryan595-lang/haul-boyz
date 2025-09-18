@@ -4,7 +4,6 @@ import { useState } from "react"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
 
 export function GallerySection() {
-  // Only 4 images: 17.jpeg, 18.jpeg, 19.jpeg, 20.jpeg
   const images = Array.from({ length: 4 }, (_, i) => `/gallerypics/${i + 17}.jpeg`)
   const [currentIndex, setCurrentIndex] = useState<number | null>(null)
 
@@ -33,21 +32,18 @@ export function GallerySection() {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {images.map((src, index) => (
             <div
               key={index}
-              className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer"
+              className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer transition-transform duration-300 hover:scale-105 min-h-[300px]"
               onClick={() => setCurrentIndex(index)}
             >
               <img
                 src={src}
                 alt={`Gallery image ${index + 1}`}
-                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-lg font-semibold">
-                View
-              </div>
             </div>
           ))}
         </div>
