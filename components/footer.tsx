@@ -68,10 +68,10 @@ export function Footer() {
 
           {/* Social Media Icons */}
           <div className="flex justify-center space-x-6">
-            <a href="#" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+            <a href="https://www.facebook.com/people/HaulBoyz-Junk-Removal/61571943850559/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
               <Facebook className="w-5 h-5" />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+            <a href="https://www.instagram.com/haulboyzjunk/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
               <Instagram className="w-5 h-5" />
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
