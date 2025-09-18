@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react"
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter, Linkedin } from "lucide-react"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -122,9 +122,7 @@ export function ContactSection() {
             {/* Social Media */}
             <Card className="glass-effect border-border/50">
               <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  Connect With Us
-                </CardTitle>
+                <CardTitle className="flex items-center gap-3">Connect With Us</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex space-x-6">
@@ -134,7 +132,7 @@ export function ContactSection() {
                     rel="noopener noreferrer"
                     className="hover:opacity-80 transition-opacity"
                   >
-                    <Facebook className="w-6 h-6 text-primary" />
+                    <Facebook className="w-6 h-6" />
                   </a>
                   <a
                     href="#"
@@ -142,7 +140,23 @@ export function ContactSection() {
                     rel="noopener noreferrer"
                     className="hover:opacity-80 transition-opacity"
                   >
-                    <Instagram className="w-6 h-6 text-primary" />
+                    <Instagram className="w-6 h-6" />
+                  </a>
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity"
+                  >
+                    <Twitter className="w-6 h-6" />
+                  </a>
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity"
+                  >
+                    <Linkedin className="w-6 h-6" />
                   </a>
                 </div>
               </CardContent>
