@@ -127,7 +127,7 @@ export function ContactSection() {
               <CardContent>
                 <div className="flex space-x-6">
                   <a
-                    href="#"
+                    href="https://www.facebook.com/people/HaulBoyz-Junk-Removal/61571943850559/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:opacity-80 transition-opacity"
@@ -135,7 +135,7 @@ export function ContactSection() {
                     <Facebook className="w-6 h-6" />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/haulboyzjunk/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:opacity-80 transition-opacity"
