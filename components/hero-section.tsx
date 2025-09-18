@@ -26,8 +26,8 @@ export function HeroSection() {
         style={{ backgroundImage: "url(/servicespics/14.jpg)" }}
       ></div>
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 gradient-bg opacity-90"></div>
+      {/* Dark Gradient Overlay */}
+      <div className="absolute inset-0 bg-black/70"></div>
 
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full floating-animation"></div>
