@@ -11,7 +11,7 @@ export function AboutSection() {
           {/* Left Side - Image */}
           <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-lg">
             <Image
-              src="/about-us.jpg" // 👉 replace with your actual image
+              src="/about-us.jpeg" // 👉 replace with your actual image
               alt="Haul Boyz Junk Removal team at work"
               fill
               className="object-cover"
