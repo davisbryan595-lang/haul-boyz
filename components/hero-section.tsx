@@ -20,8 +20,14 @@ export function HeroSection() {
 
   return (
     <section id="home" className="min-h-screen relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 gradient-bg"></div>
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url(/servicespics/14.jpg)" }}
+      ></div>
+
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 gradient-bg opacity-90"></div>
 
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full floating-animation"></div>
