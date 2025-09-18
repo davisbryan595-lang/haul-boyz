@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -19,9 +19,7 @@ export function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
     console.log("Form submitted:", formData)
-    // Reset form
     setFormData({ name: "", email: "", phone: "", message: "" })
     alert("Thank you for your message! We'll get back to you soon.")
   }
@@ -117,6 +115,35 @@ export function ContactSection() {
                     <span>Sunday:</span>
                     <span className="font-semibold">9:00 AM - 5:00 PM</span>
                   </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Social Media */}
+            <Card className="glass-effect border-border/50">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3">
+                  Connect With Us
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex space-x-6">
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity"
+                  >
+                    <Facebook className="w-6 h-6 text-primary" />
+                  </a>
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity"
+                  >
+                    <Instagram className="w-6 h-6 text-primary" />
+                  </a>
                 </div>
               </CardContent>
             </Card>
