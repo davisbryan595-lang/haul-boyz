@@ -1,44 +1,35 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Trash2, Home, Car, Wrench, Leaf, Package, Building, Recycle } from "lucide-react"
+import { Card } from "@/components/ui/card"
 
 const services = [
   {
-    icon: Wrench,
     title: "Appliances Removal",
     description: "Safe removal and disposal of old appliances including refrigerators, washers, dryers, and more.",
   },
   {
-    icon: Building,
     title: "Gutter Cleanout",
     description: "Complete gutter cleaning and debris removal to keep your home protected from water damage.",
   },
   {
-    icon: Home,
     title: "Home Cleanout",
     description: "Full home cleanouts for moving, downsizing, or estate clearing with careful handling of belongings.",
   },
   {
-    icon: Car,
     title: "Garage Cleanout",
     description: "Reclaim your garage space with our comprehensive garage cleanout and organization services.",
   },
   {
-    icon: Recycle,
     title: "Scrap Pickup",
     description: "Metal scrap collection and recycling services for construction debris and old metal items.",
   },
   {
-    icon: Leaf,
     title: "Yard Cleanup",
     description: "Seasonal yard cleanup, brush removal, and landscaping debris disposal services.",
   },
   {
-    icon: Trash2,
     title: "Junk Removal",
     description: "General junk removal for furniture, electronics, and household items you no longer need.",
   },
   {
-    icon: Package,
     title: "Construction Debris",
     description: "Safe removal of construction waste, renovation debris, and building materials.",
   },
@@ -56,25 +47,31 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Service Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <Card
               key={index}
-              className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-2 glass-effect border-border/50"
+              className="relative group overflow-hidden rounded-2xl shadow-lg h-[280px] cursor-pointer"
+              style={{
+                backgroundImage: `url(/servicespics/${index + 1}.jpg)`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
-              <CardContent className="p-6 text-center">
-                <div className="mb-4 flex justify-center">
-                  <div className="p-3 rounded-full bg-primary/10 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
-                    <service.icon className="w-8 h-8 text-primary group-hover:text-primary-foreground" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-balance">{service.title}</h3>
-                <p className="text-muted-foreground text-pretty">{service.description}</p>
-              </CardContent>
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/50 group-hover:bg-black/70 transition-all duration-300"></div>
+
+              {/* Content */}
+              <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 transition-transform duration-300 group-hover:scale-105">
+                <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
+                <p className="text-sm md:text-base text-gray-200">{service.description}</p>
+              </div>
             </Card>
           ))}
         </div>
 
+        {/* Why Choose Us */}
         <div className="mt-16 text-center">
           <div className="glass-effect rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">Why Choose Haul Boyz?</h3>
